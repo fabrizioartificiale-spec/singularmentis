@@ -62,125 +62,116 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Colonna destra: illustrazione evolutiva a matita (sequenza orizzontale con freccia) */}
+              {/* Colonna destra: illustrazione evolutiva ispirata al disegno della bambina */}
               <div className="relative max-w-md mx-auto lg:mx-0 animate-fade-in animate-delay-300">
-                <div className="text-center mb-8 text-sabbia text-xs uppercase tracking-widest font-bold">
-                  Il bambino che cresce
-                </div>
-
-                {/* Container sequenza orizzontale */}
-                <div className="relative flex items-center justify-center gap-2 min-h-[340px]">
-                  {/* Fase 1 */}
+                {/* Container sequenza orizzontale - solo disegni, niente scritte */}
+                <div className="relative flex items-center justify-center gap-3 min-h-[280px]">
+                  {/* Fase 1 - scarabocchio */}
                   <div
                     className={`relative opacity-60 transition-opacity duration-700 ${activeFase === 1 ? 'opacity-100' : 'opacity-60'}`}
                   >
                     <div className="w-40 h-40 mx-auto">
-                      <svg className="w-full h-full pencil" viewBox="0 0 200 200" aria-label="Fase 1 - schizzo iniziale">
-                        <rect x="20" y="30" w="160" h="140" fill="none" stroke="#D1D5DB" strokeWidth="1" />
-                        <circle cx="100" cy="60" r="16" stroke="#6B7280" strokeWidth="1.2" fill="none" />
-                        <line x1="100" y1="76" x2="100" y2="108" stroke="#6B7280" strokeWidth="1.2" />
-                        <line x1="86" y1="88" x2="114" y2="88" stroke="#6B7280" strokeWidth="1.2" />
-                        <line x1="90" y1="108" x2="76" y2="136" stroke="#6B7280" strokeWidth="1.2" />
-                        <line x1="110" y1="108" x2="124" y2="136" stroke="#6B7280" strokeWidth="1.2" />
-                        {/* Orsacchiotto */}
-                        <path d="M 62 98 Q 52 88 58 76 Q 68 72 78 76 Q 88 72 98 76 Q 108 72 102 86 Q 100 96 92 92 Q 82 96 72 92 Q 67 88 62 98 Z" fill="none" stroke="#9CA3AF" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-                        <circle cx="60" cy="80" r="2" fill="none" stroke="#9CA3AF" strokeWidth="1" />
-                        <circle cx="80" cy="80" r="2" fill="none" stroke="#9CA3AF" strokeWidth="1" />
+                      <svg className="w-full h-full pencil" viewBox="0 0 200 200" aria-label="Fase 1 - scarabocchio">
+                        <rect x="30" y="30" w="140" h="140" fill="none" stroke="#D1D5DB" strokeWidth="1" />
+                        <path d="M 90 70 Q 85 60 95 65 Q 100 60 110 70 Q 105 80 95 85 Q 85 80 90 70 Z" fill="none" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M 80 60 Q 75 55 85 65 Q 90 55 95 65 Q 90 75 80 70 Z" fill="none" stroke="#6B7280" strokeWidth="1" strokeLinecap="round" />
+                        <path d="M 100 75 Q 105 65 115 75 Q 110 85 100 80 Z" fill="none" stroke="#6B7280" strokeWidth="1" strokeLinecap="round" />
+                        <path d="M 85 85 Q 80 90 90 95 Q 95 80 85 85 Z" fill="none" stroke="#6B7280" strokeWidth="1" strokeLinecap="round" />
+                        <path d="M 95 80 Q 100 70 110 80 Q 105 90 95 85 Z" fill="none" stroke="#6B7280" strokeWidth="1" strokeLinecap="round" />
                       </svg>
-                    </div>
-                    <div className="text-[10px] text-testo/50 uppercase tracking-widest mt-2 font-medium">
-                      schizzo iniziale
                     </div>
                   </div>
 
                   {/* Freccia curva tra fase 1 e 2 */}
-                  <svg className="w-16 h-16 text-sabbia" viewBox="0 0 100 100">
+                  <svg className="w-14 h-14 text-sabbia" viewBox="0 0 100 100">
                     <path d="M 20 50 Q 50 20 80 50" fill="none" stroke="#D8D0C2" strokeWidth="1.5" strokeLinecap="round" />
                     <path d="M 78 44 Q 82 50 78 56" fill="none" stroke="#D8D0C2" strokeWidth="1.5" strokeLinecap="round" />
                   </svg>
 
-                  {/* Fase 2 */}
+                  {/* Fase 2 - sole */}
                   <div
                     className={`relative opacity-60 transition-opacity duration-700 ${activeFase === 2 ? 'opacity-100' : 'opacity-60'}`}
                   >
                     <div className="w-40 h-40 mx-auto">
-                      <svg className="w-full h-full pencil" viewBox="0 0 200 200" aria-label="Fase 2 - figura più definita">
-                        <rect x="20" y="30" w="160" h="140" fill="none" stroke="#D1D5DB" strokeWidth="1" />
-                        <ellipse cx="100" cy="64" rx="20" ry="24" stroke="#6B7280" strokeWidth="1.2" fill="none" />
-                        <line x1="100" y1="88" x2="100" y2="120" stroke="#6B7280" strokeWidth="1.2" />
-                        <line x1="84" y1="98" x2="116" y2="98" stroke="#6B7280" strokeWidth="1.2" />
-                        <line x1="92" y1="120" x2="76" y2="148" stroke="#6B7280" strokeWidth="1.2" />
-                        <line x1="108" y1="120" x2="124" y2="148" stroke="#6B7280" strokeWidth="1.2" />
-                        <line x1="92" y1="148" x2="80" y2="176" stroke="#6B7280" strokeWidth="1.2" />
-                        <line x1="108" y1="148" x2="120" y2="176" stroke="#6B7280" strokeWidth="1.2" />
-                        {/* Orsacchiotto */}
-                        <path d="M 68 104 Q 58 94 66 82 Q 76 78 86 82 Q 96 78 90 92 Q 88 102 80 98 Q 70 102 64 98 Q 59 94 66 104 Z" fill="none" stroke="#9CA3AF" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
-                        <circle cx="66" cy="84" r="2" fill="none" stroke="#9CA3AF" strokeWidth="1" />
-                        <circle cx="84" cy="84" r="2" fill="none" stroke="#9CA3AF" strokeWidth="1" />
+                      <svg className="w-full h-full pencil" viewBox="0 0 200 200" aria-label="Fase 2 - sole">
+                        <rect x="30" y="30" w="140" h="140" fill="none" stroke="#D1D5DB" strokeWidth="1" />
+                        <circle cx="100" cy="100" r="28" stroke="#6B7280" strokeWidth="1.5" fill="none" />
+                        <line x1="100" y1="70" x2="100" y2="55" stroke="#6B7280" strokeWidth="1.2" />
+                        <line x1="100" y1="130" x2="100" y2="145" stroke="#6B7280" strokeWidth="1.2" />
+                        <line x1="70" y1="100" x2="55" y2="100" stroke="#6B7280" strokeWidth="1.2" />
+                        <line x1="130" y1="100" x2="145" y2="100" stroke="#6B7280" strokeWidth="1.2" />
+                        <line x1="74" y1="74" x2="60" y2="60" stroke="#6B7280" strokeWidth="1.2" />
+                        <line x1="126" y1="126" x2="140" y2="140" stroke="#6B7280" strokeWidth="1.2" />
+                        <line x1="126" y1="74" x2="140" y2="60" stroke="#6B7280" strokeWidth="1.2" />
+                        <line x1="74" y1="126" x2="60" y2="140" stroke="#6B7280" strokeWidth="1.2" />
+                        <path d="M 100 70 Q 95 65 90 70 Q 95 75 100 70 Z" fill="none" stroke="#6B7280" strokeWidth="1" />
+                        <path d="M 100 130 Q 105 135 110 130 Q 105 125 100 130 Z" fill="none" stroke="#6B7280" strokeWidth="1" />
+                        <path d="M 70 100 Q 65 95 70 90 Q 75 95 70 100 Z" fill="none" stroke="#6B7280" strokeWidth="1" />
+                        <path d="M 130 100 Q 135 105 130 110 Q 125 105 130 100 Z" fill="none" stroke="#6B7280" strokeWidth="1" />
                       </svg>
-                    </div>
-                    <div className="text-[10px] text-testo/50 uppercase tracking-widest mt-2 font-medium">
-                      figura definita
                     </div>
                   </div>
 
                   {/* Freccia curva tra fase 2 e 3 */}
-                  <svg className="w-16 h-16 text-sabbia" viewBox="0 0 100 100">
+                  <svg className="w-14 h-14 text-sabbia" viewBox="0 0 100 100">
                     <path d="M 20 50 Q 50 20 80 50" fill="none" stroke="#D8D0C2" strokeWidth="1.5" strokeLinecap="round" />
                     <path d="M 78 44 Q 82 50 78 56" fill="none" stroke="#D8D0C2" strokeWidth="1.5" strokeLinecap="round" />
                   </svg>
 
-                  {/* Fase 3 */}
+                  {/* Fase 3 - stick figure / bambina stilizzata */}
                   <div
                     className={`relative opacity-60 transition-opacity duration-700 ${activeFase === 3 ? 'opacity-100' : 'opacity-60'}`}
                   >
                     <div className="w-40 h-40 mx-auto">
-                      <svg className="w-full h-full pencil" viewBox="0 0 200 200" aria-label="Fase 3 - dettagli e proporzioni">
-                        <rect x="20" y="30" w="160" h="140" fill="none" stroke="#D1D5DB" strokeWidth="1" />
-                        <path d="M 80 56 Q 100 44 120 56 Q 126 76 122 96 Q 118 116 104 112 Q 90 116 84 96 Q 88 76 94 56 Q 92 52 100 52 Q 108 52 106 56 Z" fill="none" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-                        <line x1="100" y1="100" x2="100" y2="128" stroke="#6B7280" strokeWidth="1.2" />
-                        <path d="M 86 112 Q 100 108 114 112" fill="none" stroke="#6B7280" strokeWidth="1.2" />
-                        <circle cx="90" cy="88" r="3" fill="none" stroke="#6B7280" strokeWidth="1" />
-                        <circle cx="110" cy="88" r="3" fill="none" stroke="#6B7280" strokeWidth="1" />
-                        <line x1="90" y1="128" x2="76" y2="152" stroke="#6B7280" strokeWidth="1.2" />
-                        <line x1="110" y1="128" x2="124" y2="152" stroke="#6B7280" strokeWidth="1.2" />
-                        <line x1="84" y1="152" x2="72" y2="176" stroke="#6B7280" strokeWidth="1.2" />
-                        <line x1="116" y1="152" x2="128" y2="176" stroke="#6B7280" strokeWidth="1.2" />
+                      <svg className="w-full h-full pencil" viewBox="0 0 200 200" aria-label="Fase 3 - bambina stilizzata">
+                        <rect x="30" y="30" w="140" h="140" fill="none" stroke="#D1D5DB" strokeWidth="1" />
+                        <circle cx="100" cy="60" r="18" stroke="#6B7280" strokeWidth="1.2" fill="none" />
+                        <line x1="100" y1="78" x2="100" y2="115" stroke="#6B7280" strokeWidth="1.2" />
+                        <line x1="78" y1="95" x2="122" y2="95" stroke="#6B7280" strokeWidth="1.2" />
+                        <line x1="90" y1="115" x2="80" y2="150" stroke="#6B7280" strokeWidth="1.2" />
+                        <line x1="110" y1="115" x2="120" y2="150" stroke="#6B7280" strokeWidth="1.2" />
+                        {/* Capelli mossi */}
+                        <path d="M 85 50 Q 80 40 90 42 Q 100 35 110 45 Q 115 55 115 65 Q 110 72 100 70 Q 90 72 85 62 Z" fill="none" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                        {/* Vestito */}
+                        <path d="M 90 115 Q 85 120 82 128 Q 78 140 78 152 Q 78 155 85 152 Q 92 150 100 152 Q 108 150 115 155 Q 115 152 122 140 Q 118 128 115 120 Q 110 115 100 115 Z" fill="none" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                        {/* Braccia */}
+                        <line x1="82" y1="100" x2="70" y2="110" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
+                        <line x1="118" y1="100" x2="130" y2="110" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
+                        {/* Volto */}
+                        <circle cx="94" cy="56" r="3" fill="none" stroke="#6B7280" strokeWidth="1" />
+                        <circle cx="106" cy="56" r="3" fill="none" stroke="#6B7280" strokeWidth="1" />
+                        <path d="M 96 64 Q 100 66 104 64" fill="none" stroke="#6B7280" strokeWidth="1" />
                       </svg>
-                    </div>
-                    <div className="text-[10px] text-testo/50 uppercase tracking-widest mt-2 font-medium">
-                      dettagli e proporzioni
                     </div>
                   </div>
 
                   {/* Freccia curva tra fase 3 e 4 */}
-                  <svg className="w-16 h-16 text-sabbia" viewBox="0 0 100 100">
+                  <svg className="w-14 h-14 text-sabbia" viewBox="0 0 100 100">
                     <path d="M 20 50 Q 50 20 80 50" fill="none" stroke="#D8D0C2" strokeWidth="1.5" strokeLinecap="round" />
                     <path d="M 78 44 Q 82 50 78 56" fill="none" stroke="#D8D0C2" strokeWidth="1.5" strokeLinecap="round" />
                   </svg>
 
-                  {/* Fase 4 */}
+                  {/* Fase 4 - ritratto giovane realistico */}
                   <div
                     className={`relative opacity-60 transition-opacity duration-700 ${activeFase === 4 ? 'opacity-100' : 'opacity-60'}`}
                   >
                     <div className="w-40 h-40 mx-auto">
                       <svg className="w-full h-full pencil" viewBox="0 0 200 200" aria-label="Fase 4 - ritratto giovane">
-                        <rect x="20" y="30" w="160" h="140" fill="none" stroke="#D1D5DB" strokeWidth="1" />
-                        <path d="M 76 62 Q 100 48 124 62 Q 130 86 126 110 Q 120 130 104 126 Q 88 130 82 110 Q 76 86 84 62 Q 82 58 100 58 Q 118 58 116 62 Z" fill="none" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-                        <line x1="100" y1="112" x2="100" y2="140" stroke="#6B7280" strokeWidth="1.2" />
-                        <path d="M 86 126 Q 100 122 114 126" fill="none" stroke="#6B7280" strokeWidth="1.2" />
-                        <circle cx="88" cy="94" r="3.5" fill="none" stroke="#6B7280" strokeWidth="1" />
-                        <circle cx="112" cy="94" r="3.5" fill="none" stroke="#6B7280" strokeWidth="1" />
-                        <ellipse cx="100" cy="98" rx="14" ry="10" fill="none" stroke="#6B7280" strokeWidth="1" />
-                        <path d="M 84 92 Q 100 96 116 92" fill="none" stroke="#6B7280" strokeWidth="1" />
-                        <line x1="90" y1="140" x2="76" y2="164" stroke="#6B7280" strokeWidth="1.2" />
-                        <line x1="110" y1="140" x2="124" y2="164" stroke="#6B7280" strokeWidth="1.2" />
-                        <line x1="82" y1="164" x2="70" y2="184" stroke="#6B7280" strokeWidth="1.2" />
-                        <line x1="118" y1="164" x2="130" y2="184" stroke="#6B7280" strokeWidth="1.2" />
+                        <rect x="30" y="30" w="140" h="140" fill="none" stroke="#D1D5DB" strokeWidth="1" />
+                        <path d="M 80 55 Q 100 42 120 55 Q 126 78 122 100 Q 118 120 102 116 Q 86 120 82 100 Q 86 78 92 55 Q 88 50 100 50 Q 112 50 110 55 Z" fill="none" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                        <line x1="100" y1="100" x2="100" y2="130" stroke="#6B7280" strokeWidth="1.2" />
+                        <path d="M 86 114 Q 100 110 114 114" fill="none" stroke="#6B7280" strokeWidth="1.2" />
+                        <circle cx="88" cy="90" r="3.5" fill="none" stroke="#6B7280" strokeWidth="1" />
+                        <circle cx="112" cy="90" r="3.5" fill="none" stroke="#6B7280" strokeWidth="1" />
+                        <ellipse cx="100" cy="94" rx="14" ry="10" fill="none" stroke="#6B7280" strokeWidth="1" />
+                        <path d="M 84 88 Q 100 92 116 88" fill="none" stroke="#6B7280" strokeWidth="1" />
+                        <line x1="90" y1="130" x2="76" y2="156" stroke="#6B7280" strokeWidth="1.2" />
+                        <line x1="110" y1="130" x2="124" y2="156" stroke="#6B7280" strokeWidth="1.2" />
+                        <line x1="82" y1="156" x2="70" y2="176" stroke="#6B7280" strokeWidth="1.2" />
+                        <line x1="118" y1="156" x2="130" y2="176" stroke="#6B7280" strokeWidth="1.2" />
+                        {/* Capelli */}
+                        <path d="M 82 52 Q 78 45 88 42 Q 100 38 112 42 Q 122 45 118 52 Q 115 60 100 58 Q 85 60 82 52 Z" fill="none" stroke="#6B7280" strokeWidth="1" strokeLinecap="round" />
                       </svg>
-                    </div>
-                    <div className="text-[10px] text-testo/50 uppercase tracking-widest mt-2 font-medium">
-                      ritratto giovane
                     </div>
                   </div>
                 </div>
