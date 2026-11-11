@@ -8,7 +8,7 @@ export default function App() {
             <img
               src="/logo.png"
               alt="Logo SINGULARMENTIS"
-              className="w-16 h-auto"
+              className="w-24 h-auto"
             />
           </div>
           <nav className="hidden md:flex space-x-6 text-sm font-semibold uppercase tracking-widest text-avorio/70">
@@ -212,7 +212,7 @@ export default function App() {
             <img
               src="/logo.png"
               alt="Logo SINGULARMENTIS"
-              className="w-12 h-auto"
+              className="w-20 h-auto"
             />
             <span className="text-xs font-extrabold uppercase tracking-widest text-avorio/60">
               SINGULARMENTIS
