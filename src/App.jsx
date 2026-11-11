@@ -6,48 +6,50 @@ export default function App() {
   return (
     <div className="min-h-screen bg-sfondo text-testo">
       {/* Header */}
-      <header className="px-6 py-6 border-b border-sabbia bg-sfondo/90 backdrop-blur sticky top-0 z-20 animate-fade-in animate-delay-100">
+      <header className="px-6 py-6 border-b border-sabbia bg-sfondo/90 backdrop-blur sticky top-0 z-20 animate-fade-in">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <div className="flex items-center gap-3 hover-lift cursor-default">
+          <div className="flex items-center gap-3 cursor-default">
             <img
               src="/logo.png"
               alt="Logo Singularmentis"
               className="w-20 h-auto md:w-24"
             />
           </div>
-          <nav className="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-widest text-testo/70">
-            <a href="#home" className="border-b-2 border-verde-petrolio pb-1 hover:text-verde-petrolio transition-colors hover-lift">Home</a>
-            <a href="#progetto" className="hover:text-verde-petrolio transition-colors hover-lift">Il Progetto</a>
-            <a href="#teoria" className="hover:text-verde-petrolio transition-colors hover-lift">Teoria e Ricerche</a>
-            <a href="#approfondimenti" className="hover:text-verde-petrolio transition-colors hover-lift">Approfondimenti</a>
-            <a href="#gruppi" className="hover:text-verde-petrolio transition-colors hover-lift">Gruppi e Comunità</a>
-            <a href="#contatti" className="hover:text-verde-petrolio transition-colors hover-lift">Contatti</a>
+          <nav className="hidden md:flex space-x-8 text-sm font-medium tracking-wide text-testo/70">
+            <a href="#home" className="border-b-2 border-verde-petrolio pb-1">Home</a>
+            <a href="#progetto" className="hover:text-verde-petrolio transition-colors">Il Progetto</a>
+            <a href="#teoria" className="hover:text-verde-petrolio transition-colors">Teoria e Ricerche</a>
+            <a href="#approfondimenti" className="hover:text-verde-petrolio transition-colors">Approfondimenti</a>
+            <a href="#gruppi" className="hover:text-verde-petrolio transition-colors">Gruppi e Comunità</a>
+            <a href="#contatti" className="hover:text-verde-petrolio transition-colors">Contatti</a>
           </nav>
-          <button className="hidden md:flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-verde-petrolio hover:text-verde-petrolio-hover transition-colors">
+          <button className="hidden md:flex items-center gap-2 text-sm font-medium text-verde-petrolio hover:text-verde-petrolio-hover transition-colors">
             <span>🔍</span> Cerca
           </button>
         </div>
+        {/* Linea sottile sotto navbar come nelle immagini di riferimento */}
+        <div className="h-[1px] bg-sabbia w-full mt-1" />
       </header>
 
       <main className="max-w-6xl mx-auto px-6">
         {/* Hero */}
-        <section id="home" className="relative overflow-hidden animate-fade-in animate-delay-100">
+        <section id="home" className="relative overflow-hidden animate-fade-in">
           <div className="absolute inset-0 -z-10 bg-hero" />
           <div className="wave wave-1" />
           <div className="wave wave-2" />
           <div className="relative z-10 max-w-5xl mx-auto px-6 py-16 md:py-28 lg:py-40">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               {/* Colonna sinistra: testo */}
-              <div className="text-center lg:text-left animate-fade-in animate-delay-100">
+              <div className="text-center lg:text-left animate-slide-up animate-delay-100">
                 <div className="flex items-center justify-center lg:justify-start gap-3 mb-8">
                   <span className="text-sm font-extrabold uppercase tracking-widest text-verde-petrolio border-b-2 border-verde-petrolio pb-1">
                     Singularmentis
                   </span>
                 </div>
-                <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight text-testo animate-slide-right animate-delay-300">
+                <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight text-testo font-normal italic animate-slide-right animate-delay-300">
                   La singolarità come orizzonte
                 </h1>
-                <div className="h-[1px] w-16 bg-verde-petrolio mx-auto lg:mx-0 mb-8 animate-slide-left animate-delay-400" />
+                <div className="line-hero mx-auto lg:mx-0 mb-8 animate-slide-left animate-delay-400" />
                 <p className="text-base md:text-lg max-w-xl mx-auto lg:mx-0 text-testo/70 leading-relaxed mb-12 font-light animate-fade-in animate-delay-500">
                   Un progetto di pensiero, clinica e cultura<br />
                   per esplorare la singolarità dell’essere umano,<br />
@@ -204,17 +206,17 @@ export default function App() {
         </section>
 
         {/* Il Progetto */}
-        <section id="progetto" className="py-20 border-t border-sabbia border-b border-sabbia bg-sfondo-chiaro animate-scale-in animate-delay-700">
+        <section id="progetto" className="py-20 border-t border-sabbia border-b border-sabbia bg-sfondo-chiaro animate-slide-up animate-delay-700">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16 animate-slide-left animate-delay-700">
-              <h3 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight mb-3 text-testo">
+            <div className="text-center mb-16 animate-slide-up animate-delay-700">
+              <h3 className="text-3xl md:text-4xl font-bold tracking-tight mb-3 text-testo">
                 Il Progetto
               </h3>
               <div className="h-[1px] bg-sabbia w-20 mx-auto" />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="relative p-8 border-2 border-verde-petrolio-soft rounded-xl bg-white hover:border-verde-petrolio transition-all duration-200 hover-lift animate-slide-left animate-delay-700 group">
+              <div className="relative p-8 border-2 border-verde-petrolio-soft rounded-xl bg-white hover:border-verde-petrolio transition-all duration-200 hover-lift animate-slide-up animate-delay-700 group">
                 <div className="w-12 h-12 bg-verde-petrolio/10 border-2 border-verde-petrolio rounded-full flex items-center justify-center mb-6 group-hover:bg-verde-petrolio group-hover:text-white transition-all duration-200">
                   <span className="text-xl text-verde-petrolio">1</span>
                 </div>
@@ -225,7 +227,7 @@ export default function App() {
                 </p>
               </div>
 
-              <div className="relative p-8 border-2 border-sabbia rounded-xl bg-white hover:border-verde-petrolio transition-all duration-200 hover-lift animate-slide-right animate-delay-800 group">
+              <div className="relative p-8 border-2 border-sabbia rounded-xl bg-white hover:border-verde-petrolio transition-all duration-200 hover-lift animate-slide-up animate-delay-800 group">
                 <div className="w-12 h-12 bg-sabbia border-2 border-sabbia rounded-full flex items-center justify-center mb-6 group-hover:bg-verde-petrolio group-hover:border-verde-petrolio group-hover:text-white transition-all duration-200">
                   <span className="text-xl text-testo">2</span>
                 </div>
@@ -236,7 +238,7 @@ export default function App() {
                 </p>
               </div>
 
-              <div className="relative p-8 border-2 border-sabbia rounded-xl bg-white hover:border-verde-petrolio transition-all duration-200 hover-lift animate-slide-left animate-delay-900 group">
+              <div className="relative p-8 border-2 border-sabbia rounded-xl bg-white hover:border-verde-petrolio transition-all duration-200 hover-lift animate-slide-up animate-delay-900 group">
                 <div className="w-12 h-12 bg-sabbia border-2 border-sabbia rounded-full flex items-center justify-center mb-6 group-hover:bg-verde-petrolio group-hover:border-verde-petrolio group-hover:text-white transition-all duration-200">
                   <span className="text-xl text-testo">3</span>
                 </div>
@@ -247,7 +249,7 @@ export default function App() {
                 </p>
               </div>
 
-              <div className="relative p-8 border-2 border-sabbia rounded-xl bg-white hover:border-verde-petrolio transition-all duration-200 hover-lift animate-slide-right animate-delay-1000 group">
+              <div className="relative p-8 border-2 border-sabbia rounded-xl bg-white hover:border-verde-petrolio transition-all duration-200 hover-lift animate-slide-up animate-delay-1000 group">
                 <div className="w-12 h-12 bg-sabbia border-2 border-sabbia rounded-full flex items-center justify-center mb-6 group-hover:bg-verde-petrolio group-hover:border-verde-petrolio group-hover:text-white transition-all duration-200">
                   <span className="text-xl text-testo">4</span>
                 </div>
@@ -264,8 +266,8 @@ export default function App() {
         {/* La singolarità */}
         <section id="singolarita" className="py-20 animate-fade-in animate-delay-1100">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 animate-slide-left animate-delay-1100">
-              <h3 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight mb-3 text-testo">
+            <div className="text-center mb-12 animate-slide-up animate-delay-1100">
+              <h3 className="text-3xl md:text-4xl font-bold tracking-tight mb-3 text-testo">
                 La singolarità
               </h3>
               <div className="h-[1px] bg-sabbia w-20 mx-auto" />
@@ -283,10 +285,10 @@ export default function App() {
         </section>
 
         {/* Chi siamo - Professionisti */}
-        <section id="chi-siamo" className="py-20 border-t border-sabbia border-b border-sabbia bg-sfondo-chiaro animate-scale-in animate-delay-1300">
+        <section id="chi-siamo" className="py-20 border-t border-sabbia border-b border-sabbia bg-sfondo-chiaro animate-slide-up animate-delay-1300">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16 animate-slide-left animate-delay-1300">
-              <h3 className="text-3xl md:text-4xl font-extrabold uppercase tracking-tight mb-3 text-testo">
+            <div className="text-center mb-16 animate-slide-up animate-delay-1300">
+              <h3 className="text-3xl md:text-4xl font-bold tracking-tight mb-3 text-testo">
                 Chi siamo
               </h3>
               <div className="h-[1px] bg-sabbia w-20 mx-auto" />
@@ -341,7 +343,7 @@ export default function App() {
         <section id="contatti" className="py-20 animate-fade-in animate-delay-1500">
           <div className="max-w-6xl mx-auto">
             <div className="bg-verde-petrolio p-12 rounded-2xl text-center">
-              <h3 className="text-3xl font-extrabold uppercase mb-4 text-white">
+              <h3 className="text-3xl font-bold uppercase mb-4 text-white">
                 Contatti
               </h3>
               <p className="text-white/90 text-lg mb-6">
@@ -365,7 +367,7 @@ export default function App() {
               alt="Logo Singularmentis"
               className="w-16 h-auto md:w-20"
             />
-            <span className="text-xs font-extrabold uppercase tracking-widest text-testo/60">
+            <span className="text-xs font-bold uppercase tracking-widest text-testo/60">
               SINGULARMENTIS
             </span>
           </div>
