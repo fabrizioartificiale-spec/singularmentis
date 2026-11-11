@@ -9,27 +9,11 @@ export default function App() {
       <header className="px-6 py-6 border-b border-sabbia bg-sfondo/90 backdrop-blur sticky top-0 z-20 animate-fade-in animate-delay-100">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-3 hover-lift cursor-default">
-            <svg
-              className="w-10 h-10 text-verde-petrolio"
-              viewBox="0 0 64 64"
-              aria-label="Logo SINGULARMENTIS"
-            >
-              <path
-                d="M32 8 C22 8 14 16 14 26 C14 36 22 44 32 44 C42 44 50 36 50 26 C50 16 42 8 32 8 Z"
-                fill="none"
-                stroke="#2C5F5E"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M32 26 C26 26 26 32 32 32 C38 32 38 26 32 26 Z"
-                fill="#2C5F5E"
-              />
-            </svg>
-            <span className="text-2xl md:text-3xl font-extrabold italic text-verde-petrolio tracking-tight">
-              Singularmentis
-            </span>
+            <img
+              src="/logo.png"
+              alt="Logo Singularmentis"
+              className="w-20 h-auto md:w-24"
+            />
           </div>
           <nav className="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-widest text-testo/70">
             <a href="#home" className="border-b-2 border-verde-petrolio pb-1 hover:text-verde-petrolio transition-colors hover-lift">Home</a>
@@ -51,7 +35,7 @@ export default function App() {
           <div className="absolute inset-0 -z-10 bg-hero" />
           <div className="wave wave-1" />
           <div className="wave wave-2" />
-          <div className="relative z-10 max-w-4xl mx-auto px-6 py-16 md:py-28 lg:py-40">
+          <div className="relative z-10 max-w-5xl mx-auto px-6 py-16 md:py-28 lg:py-40">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               {/* Colonna sinistra: testo */}
               <div className="text-center lg:text-left animate-fade-in animate-delay-100">
@@ -79,10 +63,10 @@ export default function App() {
               {/* Colonna destra: illustrazione evolutiva a matita */}
               <div className="relative max-w-md mx-auto lg:mx-0 animate-fade-in animate-delay-300">
                 <div className="text-center mb-8 text-sabbia text-xs uppercase tracking-widest font-bold">
-                  Evoluzione del tratto
+                  Il bambino che cresce
                 </div>
 
-                {/* Fase 1 - schizzo infantile */}
+                {/* Fase 1 - schizzo su foglio con orsacchiotto */}
                 <div
                   className={`mb-10 opacity-60 transition-opacity duration-700 ${activeFase === 1 ? 'opacity-100 scale-105' : 'opacity-60 scale-100'}`}
                 >
@@ -90,23 +74,29 @@ export default function App() {
                     <svg
                       className="w-full h-full pencil"
                       viewBox="0 0 240 240"
-                      aria-label="Fase 1 - schizzo infantile"
+                      aria-label="Fase 1 - schizzo su foglio con orsacchiotto"
                     >
-                      <circle cx="120" cy="48" r="28" strokeWidth="1.5" />
-                      <line x1="120" y1="76" x2="120" y2="132" strokeWidth="1.2" />
-                      <line x1="100" y1="96" x2="140" y2="96" strokeWidth="1.2" />
-                      <line x1="108" y1="132" x2="90" y2="162" strokeWidth="1.2" />
-                      <line x1="132" y1="132" x2="150" y2="162" strokeWidth="1.2" />
-                      {/* schizzi intorno */}
-                      <path d="M 80 80 Q 70 70 90 60 Q 100 80 80 80 Z" fill="none" stroke="#9CA3AF" strokeWidth="0.8" strokeLinecap="round" />
+                      {/* Foglietto */}
+                      <rect x="40" y="40" w="160" h="160" fill="none" stroke="#D1D5DB" strokeWidth="1" />
+                      {/* Schizzo bambino piccolo */}
+                      <circle cx="120" cy="70" r="20" stroke="#6B7280" strokeWidth="1.5" fill="none" />
+                      <line x1="120" y1="90" x2="120" y2="130" stroke="#6B7280" strokeWidth="1.5" />
+                      <line x1="100" y1="100" x2="140" y2="100" stroke="#6B7280" strokeWidth="1.5" />
+                      <line x1="105" y1="130" x2="90" y2="160" stroke="#6B7280" strokeWidth="1.5" />
+                      <line x1="135" y1="130" x2="150" y2="160" stroke="#6B7280" strokeWidth="1.5" />
+                      {/* Orsacchiotto accanto */}
+                      <path d="M 60 100 Q 50 90 55 75 Q 65 70 75 78 Q 85 70 95 78 Q 105 70 100 90 Q 95 100 105 105 Q 100 115 90 110 Q 80 115 70 110 Q 65 105 60 100 Z" fill="none" stroke="#9CA3AF" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                      <circle cx="58" cy="82" r="3" fill="none" stroke="#9CA3AF" strokeWidth="1" />
+                      <circle cx="82" cy="82" r="3" fill="none" stroke="#9CA3AF" strokeWidth="1" />
+                      <path d="M 65 90 Q 72 88 79 90" fill="none" stroke="#9CA3AF" strokeWidth="1" strokeLinecap="round" />
                     </svg>
                   </div>
                   <div className="mt-4 text-xs text-testo/60 font-medium uppercase tracking-widest">
-                    1. schizzo infantile
+                    1. schizzo su carta
                   </div>
                 </div>
 
-                {/* Fase 2 - figura più costruita */}
+                {/* Fase 2 - bambino con orsacchiotto più definito */}
                 <div
                   className={`mb-10 opacity-60 transition-opacity duration-700 ${activeFase === 2 ? 'opacity-100 scale-105' : 'opacity-60 scale-100'}`}
                 >
@@ -114,23 +104,28 @@ export default function App() {
                     <svg
                       className="w-full h-full pencil"
                       viewBox="0 0 240 240"
-                      aria-label="Fase 2 - figura più costruita"
+                      aria-label="Fase 2 - bambino con orsacchiotto definito"
                     >
-                      <ellipse cx="120" cy="52" rx="24" ry="30" strokeWidth="1.5" />
-                      <line x1="120" y1="82" x2="120" y2="128" strokeWidth="1.2" />
-                      <line x1="98" y1="98" x2="142" y2="98" strokeWidth="1.2" />
-                      <line x1="106" y1="128" x2="86" y2="162" strokeWidth="1.2" />
-                      <line x1="134" y1="128" x2="154" y2="162" strokeWidth="1.2" />
-                      <line x1="106" y1="162" x2="90" y2="190" strokeWidth="1.2" />
-                      <line x1="134" y1="162" x2="150" y2="190" strokeWidth="1.2" />
+                      <rect x="40" y="40" w="160" h="160" fill="none" stroke="#D1D5DB" strokeWidth="1" />
+                      <ellipse cx="120" cy="65" rx="22" ry="26" stroke="#6B7280" strokeWidth="1.5" fill="none" />
+                      <line x1="120" y1="91" x2="120" y2="135" stroke="#6B7280" strokeWidth="1.5" />
+                      <line x1="98" y1="104" x2="142" y2="104" stroke="#6B7280" strokeWidth="1.5" />
+                      <line x1="106" y1="135" x2="88" y2="168" stroke="#6B7280" strokeWidth="1.5" />
+                      <line x1="134" y1="135" x2="152" y2="168" stroke="#6B7280" strokeWidth="1.5" />
+                      <line x1="106" y1="168" x2="92" y2="195" stroke="#6B7280" strokeWidth="1.5" />
+                      <line x1="134" y1="168" x2="148" y2="195" stroke="#6B7280" strokeWidth="1.5" />
+                      {/* Orsacchiotto più definito */}
+                      <path d="M 70 95 Q 60 85 68 72 Q 78 68 88 74 Q 98 68 108 74 Q 118 68 108 90 Q 112 100 100 96 Q 90 100 80 94 Q 74 90 70 95 Z" fill="none" stroke="#9CA3AF" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                      <circle cx="72" cy="76" r="3.5" fill="none" stroke="#9CA3AF" strokeWidth="1" />
+                      <circle cx="94" cy="76" r="3.5" fill="none" stroke="#9CA3AF" strokeWidth="1" />
                     </svg>
                   </div>
                   <div className="mt-4 text-xs text-testo/60 font-medium uppercase tracking-widest">
-                    2. figure prende forma
+                    2. bambino con il suo orsacchiotto
                   </div>
                 </div>
 
-                {/* Fase 3 - dettagli e proporzioni */}
+                {/* Fase 3 - bambino cresciuto con dettagli */}
                 <div
                   className={`mb-10 opacity-60 transition-opacity duration-700 ${activeFase === 3 ? 'opacity-100 scale-105' : 'opacity-60 scale-100'}`}
                 >
@@ -138,25 +133,28 @@ export default function App() {
                     <svg
                       className="w-full h-full pencil"
                       viewBox="0 0 240 240"
-                      aria-label="Fase 3 - dettagli e proporzioni"
+                      aria-label="Fase 3 - bambino cresciuto"
                     >
-                      <path d="M 92 52 Q 120 40 148 52 Q 154 72 150 92 Q 142 112 126 108 Q 110 112 102 92 Q 98 72 104 52 Z" fill="none" stroke="#6B7280" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      <line x1="120" y1="102" x2="120" y2="138" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
-                      <path d="M 104 118 Q 120 114 136 118" fill="none" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
-                      <circle cx="110" cy="92" r="4" fill="none" stroke="#6B7280" strokeWidth="1" />
-                      <circle cx="130" cy="92" r="4" fill="none" stroke="#6B7280" strokeWidth="1" />
-                      <line x1="110" y1="138" x2="90" y2="170" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
-                      <line x1="130" y1="138" x2="150" y2="170" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
-                      <line x1="108" y1="170" x2="90" y2="200" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
-                      <line x1="132" y1="170" x2="150" y2="200" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
+                      <rect x="40" y="40" w="160" h="160" fill="none" stroke="#D1D5DB" strokeWidth="1" />
+                      <path d="M 98 58 Q 120 46 142 58 Q 150 80 146 100 Q 142 120 126 116 Q 110 120 104 116 Q 98 100 94 80 Q 102 58 110 58 Q 118 58 116 58 Z" fill="none" stroke="#6B7280" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      <line x1="120" y1="100" x2="120" y2="138" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
+                      <path d="M 104 116 Q 120 112 136 116" fill="none" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
+                      <circle cx="108" cy="90" r="4" fill="none" stroke="#6B7280" strokeWidth="1" />
+                      <circle cx="132" cy="90" r="4" fill="none" stroke="#6B7280" strokeWidth="1" />
+                      <line x1="110" y1="138" x2="92" y2="170" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
+                      <line x1="130" y1="138" x2="148" y2="170" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
+                      <line x1="104" y1="170" x2="88" y2="198" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
+                      <line x1="136" y1="170" x2="152" y2="198" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
+                      {/* Orsacchiotto piccolo in mano */}
+                      <path d="M 88 140 Q 82 132 86 122 Q 94 116 102 124 Q 112 116 108 128 Q 100 136 90 140 Z" fill="none" stroke="#9CA3AF" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
                   <div className="mt-4 text-xs text-testo/60 font-medium uppercase tracking-widest">
-                    3. dettagli e proporzioni
+                    3. bambino cresciuto
                   </div>
                 </div>
 
-                {/* Fase 4 - ritratto realistico adulto */}
+                {/* Fase 4 - ragazzo/adulto giovane */}
                 <div
                   className={`mb-10 opacity-60 transition-opacity duration-700 ${activeFase === 4 ? 'opacity-100 scale-105' : 'opacity-60 scale-100'}`}
                 >
@@ -164,23 +162,24 @@ export default function App() {
                     <svg
                       className="w-full h-full pencil"
                       viewBox="0 0 240 240"
-                      aria-label="Fase 4 - ritratto realistico adulto"
+                      aria-label="Fase 4 - ragazzo giovane"
                     >
-                      <path d="M 90 60 Q 120 44 150 60 Q 158 84 154 108 Q 148 132 132 128 Q 116 132 108 108 Q 102 84 110 60 Q 106 56 120 56 Q 134 56 130 60 Z" fill="none" stroke="#6B7280" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      <line x1="120" y1="110" x2="120" y2="148" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
-                      <path d="M 104 124 Q 120 120 136 124" fill="none" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
-                      <circle cx="108" cy="96" r="4.5" fill="none" stroke="#6B7280" strokeWidth="1" />
-                      <circle cx="132" cy="96" r="4.5" fill="none" stroke="#6B7280" strokeWidth="1" />
+                      <rect x="40" y="40" w="160" h="160" fill="none" stroke="#D1D5DB" strokeWidth="1" />
+                      <path d="M 94 64 Q 120 50 146 64 Q 154 88 150 112 Q 144 136 126 132 Q 110 136 104 112 Q 98 88 106 64 Q 102 60 120 60 Q 138 60 134 64 Z" fill="none" stroke="#6B7280" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      <line x1="120" y1="114" x2="120" y2="150" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
+                      <path d="M 104 130 Q 120 126 136 130" fill="none" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
+                      <circle cx="106" cy="96" r="4.5" fill="none" stroke="#6B7280" strokeWidth="1" />
+                      <circle cx="134" cy="96" r="4.5" fill="none" stroke="#6B7280" strokeWidth="1" />
                       <ellipse cx="120" cy="100" rx="16" ry="12" fill="none" stroke="#6B7280" strokeWidth="1" />
-                      <path d="M 102 90 Q 120 94 138 90" fill="none" stroke="#6B7280" strokeWidth="1" strokeLinecap="round" />
-                      <line x1="108" y1="148" x2="90" y2="180" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
-                      <line x1="132" y1="148" x2="150" y2="180" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
-                      <line x1="100" y1="180" x2="84" y2="210" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
-                      <line x1="140" y1="180" x2="156" y2="210" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
+                      <path d="M 102 94 Q 120 98 138 94" fill="none" stroke="#6B7280" strokeWidth="1" strokeLinecap="round" />
+                      <line x1="106" y1="150" x2="90" y2="180" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
+                      <line x1="134" y1="150" x2="150" y2="180" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
+                      <line x1="92" y1="180" x2="80" y2="208" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
+                      <line x1="148" y1="180" x2="160" y2="208" stroke="#6B7280" strokeWidth="1.2" strokeLinecap="round" />
                     </svg>
                   </div>
                   <div className="mt-4 text-xs text-testo/60 font-medium uppercase tracking-widest">
-                    4. ritratto adulto
+                    4. ragazzo giovane
                   </div>
                 </div>
 
@@ -361,24 +360,11 @@ export default function App() {
       <footer className="bg-sfondo text-testo py-12 border-t border-sabbia/30 animate-fade-in animate-delay-1600">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <div className="flex items-center justify-center gap-3 mb-8">
-            <svg
-              className="w-8 h-8 text-verde-petrolio"
-              viewBox="0 0 64 64"
-              aria-label="Logo SINGULARMENTIS"
-            >
-              <path
-                d="M32 8 C22 8 14 16 14 26 C14 36 22 44 32 44 C42 44 50 36 50 26 C50 16 42 8 32 8 Z"
-                fill="none"
-                stroke="#2C5F5E"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M32 26 C26 26 26 32 32 32 C38 32 38 26 32 26 Z"
-                fill="#2C5F5E"
-              />
-            </svg>
+            <img
+              src="/logo.png"
+              alt="Logo Singularmentis"
+              className="w-16 h-auto md:w-20"
+            />
             <span className="text-xs font-extrabold uppercase tracking-widest text-testo/60">
               SINGULARMENTIS
             </span>

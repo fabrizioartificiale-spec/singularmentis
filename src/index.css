@@ -17,6 +17,12 @@
     --sabbia-soft: rgba(216, 208, 194, 0.35);
     --argento: #C0C0C0;
     --pietra: #8A8F91;
+    /* Colori estratti dal logo reale */
+    --logo-beige: #F0E6D2;
+    --logo-verde: #A8E063;
+    --logo-rosa: #FF6B9D;
+    --logo-blu: #4A90D9;
+    --logo-blu-soft: rgba(74, 144, 217, 0.15);
   }
 
   html {
@@ -81,6 +87,21 @@
   }
   .hover\:text-verde-petrolio:hover {
     color: #2C5F5E;
+  }
+  .text-logo-blu {
+    color: #4A90D9;
+  }
+  .bg-logo-blu-soft {
+    background-color: rgba(74, 144, 217, 0.15);
+  }
+  .text-logo-verde {
+    color: #A8E063;
+  }
+  .text-logo-rosa {
+    color: #FF6B9D;
+  }
+  .bg-logo-beige {
+    background-color: #F0E6D2;
   }
 
   /* Hero: luminoso, arioso, avorio -> bianco */
